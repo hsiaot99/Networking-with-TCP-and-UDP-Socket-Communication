@@ -4,19 +4,19 @@
 
 This repository contains Java code for a simple TCP server that handles multiple client connections concurrently using multithreading.
 
-### 1. **Client.java**: 
+### 1. `Client.java`
    - Connects to the server at `127.0.0.1` (localhost) on port `2020`.
    - Uses `BufferedReader` and `PrintWriter` for reading from and writing to the socket.
    - Sends a message to the server and receives a response.
    - Closes the socket after communication.
 
-### 2. **ServerMain.java**: 
+### 2. `ServerMain.java` 
    - Starts a server on port `2020` using `ServerSocket`.
    - Accepts incoming client connections indefinitely in a loop.
    - For each client connection, creates a new `ServerThread` instance (which implements `Runnable`) and starts a new thread to handle client communication.
    - Tracks the number of clients connected.
 
-### 3. **ServerThread.java**: 
+### 3. `ServerThread.java`
    - Implements `Runnable` to handle communication with a single client.
    - Receives client messages, processes them (e.g., greeting the client with a welcome message and asking for their name), and sends responses.
    - Closes the connection after communication with the client is complete.
@@ -55,7 +55,7 @@ This class sets up a UDP sender that sends messages to the receiver's IP address
 This repository contains a simple UDP-based chat application implemented in Java, consisting of a server (`ChatServer`) and a client (`ChatClient`).
 The communication between clients and the server is facilitated using datagrams over UDP (User Datagram Protocol).
 
-### 1. ChatServer (`ChatServer.java`)
+### 1. `ChatServer.java`
 
 The server component manages client connections and facilitates message broadcasting to all connected clients. It operates on a specific UDP port (`2020` by default).
 
@@ -64,7 +64,7 @@ The server component manages client connections and facilitates message broadcas
 - Broadcasts received messages to all connected clients.
 - Tracks unique client addresses and ports.
 
-### 2. ChatClient (`ChatClient.java`)
+### 2. `ChatClient.java`
 
 The client component provides a graphical user interface (GUI) for users to interact with the chat server. Multiple clients can connect to the server simultaneously.
 
@@ -73,7 +73,7 @@ The client component provides a graphical user interface (GUI) for users to inte
 - Sends messages typed by the user to the server.
 - Receives and displays messages from other clients via the server.
 
-### 3. ClientWindow (`ClientWindow.java`)
+### 3. `ClientWindow.java`
 
 This class handles the GUI components for the client-side application. It includes text panes for displaying chat messages and taking user input.
 
